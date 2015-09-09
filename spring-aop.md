@@ -4,9 +4,8 @@
 
 **Advice** Method to be implemented. Interceptor are nothing but child of advice interface.
 
-`<!-- A simple MethodInterceptor style advice object (InterceptorA implements MethodInterceptor) -->     
-<bean name="interceptorA" class="com.javalobby.tnt.spring.aop.InterceptorA" />
-<!-- A simple MethodBeforeAdvice style advice object (BeforeAdviceA implements MethodBeforeAdvice) -->
+`<!-- A simple MethodInterceptor style advice object (InterceptorA implements MethodInterceptor) -->    
+<bean name="interceptorA" class="com.javalobby.tnt.spring.aop.InterceptorA" /><!-- A simple MethodBeforeAdvice style advice object (BeforeAdviceA implements MethodBeforeAdvice) -->
 <bean name="beforeAdviceA" class="com.javalobby.tnt.spring.aop.BeforeAdviceA"/>`
 
 **Joinpoint** Location in code where advice needs to be applied (field level, method level, constructor level). Spring supports only

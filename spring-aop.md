@@ -74,6 +74,18 @@ e.g. store account numbers, since this is transactional behaviour so we can have
 start transaction (before advice) and once job finished, commit transaction (after advice) can be called.
 
 
+The main point of having proxy creator is, spring automatically creates a proxy to the related object. Developer does not even has to refer this in his code.
+We can use another proxy creator which works as regular expression to find beans to work on, as below
+
+`	  <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+       <property name="beanNames"><value>*Controller</value></property>
+       <property name="interceptorNames">
+         <list>
+           <value>saloonWatcher</value>
+         </list>
+       </property>
+     </bean>`
+
 ##Reference
 
  [http://www.javalobby.org/java/forums/t44746.html](http://www.javalobby.org/java/forums/t44746.html)

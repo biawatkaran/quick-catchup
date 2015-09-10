@@ -6,7 +6,6 @@
         <artifactId>quick-catchup-parent</artifactId>
         <groupId>quick-catchup-parent</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../quick-catchup-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

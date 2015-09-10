@@ -1,0 +1,42 @@
+<serviceGroup>
+
+    <!-- 1st Method Pojo
+    Works:
+         update method as in-only so don't see after running,
+         getPrice is in-out so will see the output
+    -->
+    <service name="StockQuoteService" scope="application">
+        <description>
+            Stock Quote Sample Service
+        </description>
+        <messageReceivers>
+            <messageReceiver
+                    mep="http://www.w3.org/2004/08/wsdl/in-only"
+                    class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+            <messageReceiver
+                    mep="http://www.w3.org/2004/08/wsdl/in-out"
+                    class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">
+            com.quick.catchup.StockQuoteServiceImpl
+        </parameter>
+    </service>
+
+
+    <!-- 2nd Method Axiom
+    This should work but too lazy to change the implementation in different format i.e. OMElement etc
+
+    <service name="StockQuoteService" scope="application">
+        <description>
+            Stock Quote Service
+        </description>
+        <operation name="getPrice">
+            <messageReceiver class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver"/>
+        </operation>
+        <operation name="update">
+            <messageReceiver class="org.apache.axis2.receivers.RawXMLINOnlyMessageReceiver"/>
+        </operation>
+        <parameter name="ServiceClass">com.quick.catchup.StockQuoteServiceImpl</parameter>
+    </service>
+    -->
+</serviceGroup>

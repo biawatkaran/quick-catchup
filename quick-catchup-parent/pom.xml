@@ -12,27 +12,29 @@
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.version>3.2</maven.compiler.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
         <module>spring-aop-stuff</module>
         <module>apache-axis2-stuff</module>
+        <module>gwt-stuff</module>
     </modules>
 
     <build>
-    <finalName>QuickCatchup</finalName>
+        <finalName>QuickCatchup</finalName>
 
-    <plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.version}</version>
-        <configuration>
-            <source>${java.version}</source>
-            <target>${java.version}</target>
-        </configuration>
-    </plugin>
-    </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

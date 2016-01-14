@@ -19,6 +19,7 @@
         <module>spring-aop-stuff</module>
         <module>apache-axis2-stuff</module>
         <module>gwt-stuff</module>
+        <module>neo4j-scala-stuff</module>
     </modules>
 
     <build>

@@ -20,6 +20,7 @@
         <module>apache-axis2-stuff</module>
         <module>gwt-stuff</module>
         <module>neo4j-scala-stuff</module>
+        <module>map-reduce-stuff</module>
     </modules>
 
     <build>

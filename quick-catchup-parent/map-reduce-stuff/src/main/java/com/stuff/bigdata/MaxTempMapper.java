@@ -15,16 +15,18 @@ public class MaxTempMapper extends Mapper<LongWritable, Text, Text, IntWritable>
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
         String line = value.toString();
-        String year = line.substring(15, 19);
+        String year = line.substring(17, 21);
 
         int airTemp;
-        if(line.charAt(87) == '+'){
-            airTemp = Integer.parseInt(line.substring(88, 92));
+        if(line.charAt(42) == '+'){
+            airTemp = Integer.parseInt(line.substring(43, 47));
         } else {
-            airTemp = Integer.parseInt(line.substring(87, 92));
+            airTemp = Integer.parseInt(line.substring(42, 47));
         }
 
-        String quality = line.substring(92, 93);
+        String quality = line.substring(47, 48);
+
+        System.out.println("Karan >>> " + year + ": " + airTemp + ": " + quality);
 
         if(airTemp != MISSING && quality.matches("[01459]")){
             context.write(new Text(year), new IntWritable(airTemp));

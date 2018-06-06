@@ -16,11 +16,14 @@
     </properties>
 
     <modules>
-        <module>spring-aop-stuff</module>
         <module>apache-axis2-stuff</module>
+        <module>big-data-stuff</module>
+        <module>design-patterns-stuff</module>
         <module>gwt-stuff</module>
-        <module>neo4j-scala-stuff</module>
+        <module>java8-stuff</module>
         <module>map-reduce-stuff</module>
+        <module>multithreading-stuff</module>
+        <module>spring-aop-stuff</module>
     </modules>
 
     <build>
